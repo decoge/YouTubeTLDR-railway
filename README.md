@@ -1,67 +1,54 @@
-# 🎬 YouTubeTLDR
+(Adapted fork for hosting on Railway)
 
-![Rust](https://img.shields.io/badge/Rust-lang-000000.svg?style=flat&logo=rust)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/milkshiift/YouTubeTLDR/blob/master/LICENSE)
+# Deploy and Host YouTubeTLDR on [Railway](https://railway.com/deploy/youtubetldr?referralCode=decoge&utm_medium=integration&utm_source=template&utm_campaign=youtubetldr)
 
-<div align="center">
-<h3>⚡ A lightweight, self-hosted YouTube video summarizer with Gemini AI<br>
-<sub>Demo: <a href="https://tldr.milkshift.dedyn.io/">https://tldr.milkshift.dedyn.io/</a></sub>
-</h3>
-<img src="/assets/mainScreenshot.png" width="400" alt="New summary page screenshot">
-<img src="/assets/summaryScreenshot.png" width="400" alt="Summary screenshot">
-</div>
+YouTubeTLDR is a lightweight, privacy-first YouTube video summarizer powered by Google’s Gemini AI. Get concise, customizable summaries in seconds, view full transcripts, and keep your history saved locally in the browser, all with zero bloat and no data collection.
 
-## ✨ Features
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/youtubetldr?referralCode=decoge&utm_medium=integration&utm_source=template&utm_campaign=youtubetldr)
 
-*   🎯 **Customizable Prompts:** Tailor the AI's instructions to get summaries in the format you prefer
-* ⚙️ **Model Selection:** Choose any available Gemini model
-* 📝 **View Transcript:** Access the full, raw video transcript
-*   📚 **History:** Your summaries are saved locally in your browser for future reference
-*   🔒 **Privacy-Focused:** Simple Rust server that runs on your own machine. Your data stays yours
-*   🎨 **Modern UI:** Clean and beautiful user interface
+## ✨ Key Features
+
+- 🎯 **Customizable Prompts** – Shape summaries exactly how you want them
+- ⚙️ **Model Selection** – Pick any available Gemini model
+- 📝 **Full Transcript View** – Read the raw transcript alongside the summary
+- 📚 **Local History** – Summaries saved securely in your browser for quick access
+- 🔒 **Privacy-First** – No proxies, no logging — your data never leaves your control
+- 🎨 **Modern, Clean UI** – Beautiful and intuitive interface
+
+![](https://raw.githubusercontent.com/decoge/YouTubeTLDR-railway/refs/heads/master/assets/mainScreenshot.png)
+
+![](https://raw.githubusercontent.com/decoge/YouTubeTLDR-railway/refs/heads/master/assets/summaryScreenshot.png)
 
 ## 🏗️ Philosophy: Minimal by Design
 
-YouTubeTLDR embraces simplicity — maximum functionality with minimal overhead.
+Built for speed and simplicity — maximum value, minimal overhead.
 
-*   🪶 **Featherweight & Zero Bloat:** Single binary ~**0.3MB**. No databases, no Tokio, no frameworks
-*   ⚡ **Lightning Fast:** Pure Rust + vanilla HTML/JS
-*   🔑 **BYOK:** Bring Your Own Key. Uses your Google Gemini API directly — no proxies, no data collection
-*   🎯 **Single Purpose:** Just generates and saves summaries, that's it
+- 🪶 **Ultra-Lightweight** – Single ~0.3 MB binary, no databases or heavy frameworks
+- ⚡ **Blazing Fast** – Pure Rust backend + vanilla HTML/JS frontend
+- 🔑 **Bring Your Own Key** – Uses your Gemini API key directly
+- 🎯 **Single-Purpose Focus** – Does one thing really well: summarize YouTube videos
 
-Note: This server is optimized for personal use and utilizes a multithreaded worker pool for concurrency. It is not designed to support hundreds of concurrent users.
+## About Hosting YouTubeTLDR
 
-## 🚀 Getting Started
+Deploying YouTubeTLDR on [Railway](https://railway.com/deploy/youtubetldr?referralCode=decoge&utm_medium=integration&utm_source=template&utm_campaign=youtubetldr) is truly one-click simple. This template handles everything automatically, no Docker configuration or manual setup needed.  
 
-### Prerequisites
+Just add your Google Gemini API key as an environment variable, and you’re live with a public URL in minutes. Since there’s no database (all history is client-side), it stays lightweight, low-cost, and instantly scalable.
 
-*   A [Google Gemini API Key](https://aistudio.google.com/app/apikey) (Free tier with generous limits)
+## Common Use Cases
 
-### Running the Application
+- Summarizing long tutorials or lectures to learn faster
+- Extracting key takeaways from podcasts, interviews, or talks
+- Building a private knowledge base of video insights
 
-1.  Download the [latest release](https://github.com/Milkshiift/YouTubeTLDR/releases/latest) and run the executable from console:
-    ```bash
-    ./YouTubeTLDR
-    ```
-2.  Open `http://localhost:8000` in your browser
-3.  Click "Advanced Settings" and enter your API key
-4.  Paste a YouTube URL and click "Summarize"
+## Dependencies for YouTubeTLDR Hosting
 
-You can change the IP and port with `TLDR_IP` and `TLDR_PORT` environment variables.    
-The amount of workers can be changed with `TLDR_WORKERS`, set it to the amount of concurrent users you expect.
+- Google Gemini API key (required for AI summarization)
 
-## 🔨 Building from Source
+### Deployment Dependencies
+[Get your free Gemini API key here](https://ai.google.dev/gemini-api/docs/api-key)
 
-1.  Install the **nightly** [Rust toolchain](https://www.rust-lang.org/tools/install)
-2.  Clone the repository:
-    ```bash
-    git clone https://github.com/Milkshiift/YouTubeTLDR.git
-    cd YouTubeTLDR
-    ```
-3.  Build the release binary:
-    ```bash
-    cargo build --release
-    ```
-4.  Find your executable at `target/release/YouTubeTLDR`
+## Why Deploy YouTubeTLDR on Railway?
 
-By default, the native TLS implementation (like openssl) is used. If you want to use rustls build with `--no-default-features --features rustls-tls`
+[Railway](https://railway.com/deploy/youtubetldr?referralCode=decoge&utm_medium=integration&utm_source=template&utm_campaign=youtubetldr) is a singular platform to deploy your infrastructure stack. Railway will host your infrastructure so you don’t have to deal with configuration, while allowing you to vertically and horizontally scale it.
+
+By deploying YouTubeTLDR on Railway, you are one step closer to supporting a complete full-stack application with minimal burden. Host your servers, databases, AI agents, and more on Railway.
